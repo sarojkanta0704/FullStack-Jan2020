@@ -1,0 +1,82 @@
+<html>
+<head>
+  <title>Background Images</title>
+  <style>
+    .photo
+    {
+      width: 400px;
+      height: 230px;
+      border: 2px solid #aaa7a7;
+      float: left;
+      margin: 5px;
+      transition: transform 0.3s;
+      cursor: pointer;
+      background-color: #cfcccc;
+    }
+
+    .photo:hover
+    {
+      transform: scale(1.1);
+    }
+
+    #photo1
+    {
+      background-image: url("images/desert.jpg");
+      background-size: cover;
+    }
+
+    #photo2
+    {
+      background-image: url("images/jellyfish.jpg");
+      background-size: cover;
+    }
+
+    #photo3
+    {
+      background-image: url("images/sunset.jpg");
+      background-size: cover;
+    }
+
+    .image-title
+    {
+      font-family: 'Franklin Gothic Medium';
+      font-size: 30px;
+      color: white;
+      padding-top: 30px;
+      padding-left: 20px;
+      text-shadow: 2px 2px 2px #000000;
+    }
+
+    .sub-title
+    {
+      color: white;
+      font-family: 'Segoe UI';
+      font-size: 20px;
+      padding-left: 20px;
+      padding-top: 5px;
+      text-shadow: 1px 1px 1px #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Images</h1>
+
+  <div class="photo" id="photo1">
+    <div class="image-title">Desert</div>
+    <div class="sub-title">Add some text about desert</div>
+  </div>
+
+  <div class="photo" id="photo2">
+    <div class="image-title">Jellyfish</div>
+    <div class="sub-title">Add some text about jellyfish</div>
+  </div>
+
+  <div class="photo" id="photo3">
+    <div class="image-title">Sunset</div>
+    <div class="sub-title">Add some text about sunset</div>
+  </div>
+
+</body>
+</html>
+

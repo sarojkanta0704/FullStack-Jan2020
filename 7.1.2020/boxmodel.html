@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>Box Model</title>
+  <style>
+    body
+    {
+      margin: 0px;
+    }
+
+    .country
+    {
+      background-color: #a7c4df;
+      color: #000000;
+      font: 25px Tahoma;
+
+      margin: 10px 20px 30px 40px;
+      padding: 22px 20px 30px 35px;
+
+      border: 5px solid #ff0000;
+
+      /* border-style: solid;
+        border-color: #eb0808;
+        border-width: 8px; */
+
+      /* border-top: 8px double #44eb44;
+        border-left: 8px dotted rgb(133, 59, 230); */
+
+      width: 200px;
+      height: 90px;
+
+      float: left;
+
+      /* border-radius: 15px 30px 50px 100px; */
+      /* border-radius: 120px; */
+      border-radius: 8px;
+      box-shadow: 1px 1px 2px 2px #1c53e9;
+      opacity: 0.6;
+
+      transition: background-color 0.5s, box-shadow 0.4s, font-size 0.4s, opacity 0.3s, transform 0.4s;
+    }
+
+    #uk
+    {
+      clear: left;
+    }
+
+    #india
+    {
+      /* outline: 5px dotted #0000ff; */
+    }
+
+    .country:hover
+    {
+        background-color:#4189cc;
+        box-shadow: 3px 3px 2px 4px #1c53e9;
+        font-size: 35px;
+        opacity: 1;
+      /* transform: scale(1.2) rotate(360deg); */
+
+      /* transform: translate(10px, 0px); */
+        transform: skew(30deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="country" id="india">India</div>
+  <div class="country">France</div>
+  <div class="country">USA</div>
+  <div class="country" id="uk">
+    United Kingdom
+  </div>
+  <div class="country">China</div>
+</body>
+</html>

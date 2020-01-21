@@ -1,0 +1,68 @@
+<html>
+<head>
+  <title>Box Model 2</title>
+  <style>
+    body
+    {
+      margin: 0px;
+    }
+
+    .country
+    {
+       background-image: linear-gradient(to right bottom, #ff0000, #00ff00, #0000ff);
+
+       background-image: radial-gradient(circle, #ff0000, #00ff00, #0000ff);
+
+      background-color: #1fd12d;
+
+      color: #000000;
+      font: 20px Tahoma;
+
+      margin: 20px;
+      padding: 30px;
+      border: 5px solid #ff0000;
+
+      width: 40%;
+      height: 90px;
+      float: left;
+      min-width: 300px;
+      max-width: 400px;
+      
+      border-radius: 8px;
+      box-shadow: 1px 1px 2px 2px #1c53e9;
+
+      overflow: auto;
+      word-wrap: break-word;
+    }
+
+    .country:hover
+    {
+      animation: myanimation 10s;
+    }
+
+    @keyframes myanimation
+    {
+      0% { background-color: #00ff00; }
+      25% { background-color: #ff0000; }
+      50% { background-color: #0000ff; }
+      75% { background-color: #ffff00; }
+      100% { background-color: #067006cb; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="country" id="india">Loremttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+
+  <div class="country">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+
+  <div class="country">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+
+  <div class="country">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+  </div>
+
+  <div class="country">China</div>
+</body>
+
+</html>

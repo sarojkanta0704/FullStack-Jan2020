@@ -1,0 +1,145 @@
+<html>
+<head>
+  <title>Table</title>
+  <style>
+    body
+    {
+      background-image: url("back.jpg");
+    }
+    .studentstable
+    {
+      background-color: #e0dcdc;
+      width: 70%;
+      margin: auto;
+      box-shadow: 0px 0px 3px 4px #d1cece;
+      transition: box-shadow 0.3s;
+      min-width: 400px;
+      /* max-width: 300px; */
+      overflow: auto;
+    }
+    .studentstable:hover
+    {
+      box-shadow: 0px 0px 3px 7px #d1cece;
+    }
+    table
+    {
+      font-family: Tahoma;
+      font-size: 26px;
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #968f8f;
+    }
+    table thead tr
+    {
+      background-color: #a39d9dff;
+    }
+    table thead tr th
+    {
+      padding: 10px;
+    }
+    table tbody tr td
+    {
+      padding: 7px;
+    }
+    table tfoot tr td
+    {
+      padding: 11px;
+    }
+    table tbody tr
+    {
+      border: 1px solid #686363;
+    }
+    table tbody tr:hover
+    {
+      background-color: #948585;
+    }
+    table tfoot tr
+    {
+      border-top: 2px solid #000000;
+      border-bottom: 2px double #000000;
+    }
+    table caption
+    {
+      background-color: #2f598f;
+      color: #ffffff;
+      padding: 12px;
+    }
+    #jones
+    {
+      font-weight: bold;
+    }
+    .react
+    {
+      text-decoration: underline;
+    }
+    .ng
+    {
+      vertical-align: top;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Table</h1>
+
+  <div class="studentstable">
+    <table>
+      <caption>Students 2020</caption>
+
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Student Name</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Scott</td>
+          <td>UI Technologies</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Allen</td>
+          <td>Angular</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Jones</td>
+          <td class="react">ReactJS</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>Scott</td>
+          <td rowspan="2" class="ng">Angular</td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td>Allen</td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td id="jones">Jones</td>
+          <td class="react">ReactJS</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="2">Total Students:</td>
+          <td>3</td>
+        </tr>
+      </tfoot>
+
+    </table>
+  </div>
+
+</body>
+</html>
