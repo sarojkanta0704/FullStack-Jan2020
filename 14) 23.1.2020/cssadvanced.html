@@ -1,0 +1,180 @@
+<html>
+  <head>
+    <title>CSS Advanced</title>
+    <style>
+      /* Class Selector */
+      .country
+      {
+        color: #ff0000;
+      }
+
+      /* Class-Class Child Selector */
+      .firstbox .country
+      {
+        font-weight: bold;
+      }
+
+      /* ID Selector */
+      #box1
+      {
+        border: 2px solid blue;
+      }
+
+      /* ID-Class Child Selector */
+      #box2 .city
+      {
+        text-decoration: underline;
+      }
+
+      /* Tag Selector */
+      p
+      {
+        letter-spacing: 3px;
+      }
+
+      /* Tag-Class Compound Selector */
+      p.city
+      {
+        background-color: #ffff00;
+      }
+
+      /* Tag-ID Compound Selector */
+      div#box1
+      {
+        border-radius: 10px;
+      }
+
+      /* Tag-Class Child Selector */
+      div .country
+      {
+        text-shadow: 0px 0px 2px red;
+      }
+
+      /* Tag-Class Direct Child Selector*/
+      div>.country
+      {
+        background-color: #2948ce;
+      }
+
+      /* Grouping Selector */
+      .city,li
+      {
+        font-style: italic;
+      }
+
+      /* Siblings Selector */
+      #box1 .country~.city
+      {
+        font-family: 'Comic Sans MS';
+        font-size: 30px;
+      }
+
+      /* Attribute Selector */
+      img[src='img2.jpg']
+      {
+        border: 3px dotted red;
+      }
+
+      input:checked
+      {
+        box-shadow: 2px 2px 3px 2px red;
+      }
+
+      p:empty
+      {
+        border: 1px solid blue;
+        padding: 4px;
+      }
+
+      input:enabled
+      {
+        border-radius: 3px;
+      }
+
+      input:disabled
+      {
+        border: 1px solid green;
+      }
+
+      input:focus
+      {
+        box-shadow: 2px 2px 3px 2px blue;
+      }
+
+      li::after
+      {
+        content: url("tick.gif");
+      }
+
+      ::selection
+      {
+        background-color: pink;
+        color: red;
+      }
+
+      td:nth-child(2)
+      {
+        background-color: #23b83c;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="box1" class="firstbox">
+      <p class="country">India</p>
+      <p class="country">USA</p>
+      <p class="city">Mumbai</p>
+      <p class="city">Bangalore</p>
+    </div>
+
+    <div id="box2" class="secondbox">
+      <p class="city">Mumbai</p>
+      <span class="city">Hyderabad</span>
+      <p class="country">China</p>
+      <p class="city">Pune</p>
+      <p class="city">Lucknow</p>
+      <ul>
+        <li class="country">Country 1</li>
+        <li class="country">Country 2</li>
+      </ul>
+      <img src="img1.jpg">
+      <img src="img2.jpg">
+      <img src="img3.jpg">
+    </div>
+
+    <hr>
+
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="text" placeholder="Email">
+      <input type="text" placeholder="Amount" disabled="disabled">
+      <input type="checkbox" checked="checked">
+      <input type="checkbox">
+    </form>
+
+    <p></p>
+    <p></p>
+
+    <table>
+      <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>marks</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>name 1</td>
+        <td>marks 1</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>name 2</td>
+        <td>marks 2</td>
+      </tr>
+    </table>
+
+  </body>
+</html>
+
