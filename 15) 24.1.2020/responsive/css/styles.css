@@ -1,0 +1,92 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body
+{
+  font-size: 1.5em;
+  font-family: 'Segoe UI';
+}
+
+header
+{
+  background-color: #c5c5c5;
+  padding: 40px;
+  font-size: 30px;
+  text-align: center;
+}
+
+nav
+{
+  background-color: #dfdddd;
+  padding: 20px;
+}
+
+section.left
+{
+  background-color: #f5e8e8;
+  padding: 40px;
+  width: 20%;
+  min-height: 90vh;
+  float: left;
+}
+
+section.middle
+{
+  background-color: #ffffff;
+  padding: 20px;
+  width: 50%;
+  min-height: 90vh;
+  float: left;
+}
+
+aside
+{
+  background-color: #f5e8e8;
+  padding: 40px;
+  width: 30%;
+  min-height: 90vh;
+  float: left;
+}
+
+footer
+{
+  background-color: #dfdddd;
+  padding: 20px;
+  clear: left;
+}
+
+
+
+/* Small devices / Lower mobile phones */
+@media(min-width:300px) and (max-width: 768px)
+{
+  section.left, section.middle, aside
+  {
+    width: 100%;
+  }
+}
+
+/* Medium devices / Tablets */
+@media(min-width:769px) and (max-width: 1199px)
+{
+  section.left
+  {
+    width: 25%;
+  }
+
+  section.middle
+  {
+    width: 75%;
+  }
+
+  aside
+  {
+    width: 100%;
+    clear: left;
+  }
+}
+
