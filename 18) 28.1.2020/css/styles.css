@@ -1,0 +1,295 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body
+{
+  font-family: 'Segoe UI', Tahoma;
+  font-size: 20px;
+}
+
+.navbar
+{
+  background-color: #706d6d;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 3px 6px 2px #a8a6a6;
+}
+
+.navbar .navbar-brand
+{
+  width: 25%;
+  height: 60px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: 'Trebuchet MS';
+  font-size: 1.2em;
+  float: left;
+}
+
+.navbar .navmenu
+{
+  width: 50%;
+  height: 60px;
+  font-size: 1.1em;
+  float: left;
+}
+
+.navbar .navbar-brand a:link, .navbar .navbar-brand a:visited
+{
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 12px;
+  margin-left: 20px;
+  width: 200px;
+  display: inline-block;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.navbar .navbar-brand a:hover
+{
+  color: #eeb64e;
+}
+
+.navbar .nav-right
+{
+  width: 25%;
+  height: 60px;
+  float: left;
+  font-size: 1.1em;
+}
+
+.navbar .nav-right a:link, .navbar .nav-right a:visited
+{
+  margin-top: 6px;
+  color: #ffffff;
+  padding: 7px 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.4s;
+}
+
+.navbar .nav-right a:hover
+{
+  color: #d4d1d1;
+}
+
+.navbar .navmenu>ul
+{
+  list-style-type: none;
+}
+
+.navbar .navmenu>ul>li
+{
+  float: left;
+  margin: 6px 8px;
+}
+
+.navbar .navmenu>ul>li>a:link, .navbar .navmenu>ul>li>a:visited
+{
+  color: #ffffff;
+  padding: 7px 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.4s;
+}
+
+.navbar .navmenu>ul>li>a:hover
+{
+  background-color: #03a125;
+  color: #ffffff;
+}
+
+.column
+{
+  float: left;
+}
+
+
+
+/* Small devices */
+@media (min-width: 300px) and (max-width: 768px)
+{
+  .navbar-brand, .navmenu, .nav-right
+  {
+    width: 100% !important;
+    height: 200px;
+  }
+
+  .navbar
+  {
+    height: 200px;
+  }
+
+  .left-section, .middle-section
+  {
+    width: 100% !important;
+  }
+}
+
+
+.left-section
+{
+  min-height: 90vh;
+  float: left;
+  width: 20%;
+  background-color: #ece5e5;
+  padding: 20px;
+  margin-top: 7px;
+}
+
+.middle-section
+{
+  min-height: 90vh;
+  float: left;
+  width: 80%;
+  padding: 20px;
+  margin-top: 7px;
+}
+
+
+/* Dropdown menu */
+.dropdown-menu
+{
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px #d4d3d3;
+  transform: scale(0);
+  transform-origin: top center;
+  transition: transform 0.3s;
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu
+{
+  transform: scale(1);
+}
+
+.dropdown-menu a:link
+{
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover
+{
+  background-color: #b3e458;
+}
+
+
+
+/* List Group */
+.list-group
+{
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 20px;  
+}
+
+.list-group .list-group-item
+{
+  margin: 0px;
+  padding: 8px 5px;
+  border-top: 1px solid #cfcccc;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.list-group .list-group-item:hover
+{
+  background-color: #cec8c8;
+}
+
+
+/* Cards */
+.card
+{
+  width: 450px;
+  border: 1px solid #b9b8b8;
+  border-radius: 3px;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.card-header
+{
+  background-color: #747070;
+  color: #ffffff;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.card-body
+{
+  padding: 10px;
+}
+
+.card-footer
+{
+  width: 100%;
+  padding: 10px;
+  background-color: #d8d8d8;
+  position: absolute;
+  bottom: 0px;
+}
+
+
+/* Table */
+.table
+{
+  margin-top: 4px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td
+{
+  padding: 9px 5px;
+}
+
+.table.table-small td
+{
+  padding: 4px 3px;
+}
+
+.table.table-bordered tr
+{
+  border-bottom: 1px solid #d4d3d3;
+}
+
+
+/* Buttons */
+.button
+{
+  padding: 7px 15px;
+  background-color: #197dcf;
+  color: #ffffff;
+  border: 1px solid #585858;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.1em;
+  box-shadow: 0px 0px 2px 1px #646262;
+  margin: 2px 6px;
+  transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+.button:hover
+{
+  background-color: #0e4e83;
+  box-shadow: 0px 0px 2px 3px #646262;
+}
+
+.text-right
+{
+  text-align: right;
+}
