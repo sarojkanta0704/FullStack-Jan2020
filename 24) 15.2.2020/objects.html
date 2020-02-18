@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Objects</h1>
+
+    <script>
+      var emp= {
+          name: "Scott",
+
+          dateOfBirth: new Date("2000-08-15"),
+
+          email: { personalEmail: "scott@gmail.com", officeEmail: "scott@company.com" },
+
+          mobile: [ "1234", "8861", "7700" ],
+
+          age: function() {
+            return new Date() - this.dateOfBirth;
+          }
+
+        };
+
+
+        console.log(emp);
+        console.log(emp.name);
+        console.log(emp.dateOfBirth);
+        console.log(emp.mobile);
+
+        console.log(Math.floor(emp.age() / 1000 / 60 / 60 / 24 / 30 / 12)); //milliseconds to years
+
+        console.log(emp.email.officeEmail);
+    </script>
+
+
+
+
+  </body>
+</html>
+

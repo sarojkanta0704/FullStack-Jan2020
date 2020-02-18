@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Constructor Function - JavaScript</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Constructor Function</h1>
+
+    <script>
+      var Employee = function(name, dateOfBirth)
+      {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        
+        this.age = function() {
+          return Math.floor((new Date() - this.dateOfBirth) / 1000 / 60 / 60 / 24 / 30 / 12);
+        };
+      };
+
+      var emp1 = new Employee("Scott", new Date("2000-08-15"));
+      console.log(emp1);
+      // console.log(emp1.name);
+      // console.log(emp1.dateOfBirth);
+      // console.log(emp1.age());
+
+      var emp2 = new Employee("Allen", new Date("1990-07-02"));
+      console.log(emp2);
+      // console.log(emp2.name);
+      // console.log(emp2.dateOfBirth);
+      // console.log(emp2.age());
+
+    </script>
+
+
+
+
+  </body>
+</html>
+

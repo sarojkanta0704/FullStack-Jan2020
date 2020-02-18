@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map - Arrays - JavaScript</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Arrays - Map</h1>
+
+    <script>
+      /* Map: Executes the function once for each element; and returns an array with returned values from function. */
+      var marks = [ 25, 80, 31, 90 ];
+      var result = marks.map( 
+        function(m)
+        {
+          m++;
+          console.log(m);
+          return m;
+        }
+      );
+      console.log(result); //Output: [ 26, 81, 32, 91 ]
+    </script>
+
+
+
+
+  </body>
+</html>
+

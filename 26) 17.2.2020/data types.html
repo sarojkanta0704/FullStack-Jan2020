@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Types</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Data Types</h1>
+
+    <script>
+      console.log(typeof {});
+      console.log(10 === "10");
+      console.log(String(100));
+      var a = 100.9828374982734;
+      console.log(a.toString());
+      console.log(Number("100.834"));
+      console.log(Number("naresh"));
+      console.log(parseInt("100.834"));
+      console.log(parseInt("naresh"));
+      console.log(a.toFixed(2));
+
+      var b = "Naresh123";
+      console.log(b.toUpperCase());
+      console.log(b.toLowerCase());
+      console.log(b.length);
+      console.log(b.substr(2));
+      console.log("Hyderabad".indexOf("a", 6));
+      console.log("one two three".split(" "));
+
+
+      var d = new Date();
+      console.log(d);
+      console.log(d.toLocaleDateString());
+
+      console.log(d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() );
+
+      console.log(d.toLocaleTimeString());
+
+      console.log(d.getTime());
+
+      console.log(window);
+
+      console.log(window.location.href);
+
+      console.log(window.navigator.userAgent);
+
+      console.log(window.screenX);
+      console.log(window.screenY);
+
+      //window.alert("Hello");
+
+      //console.log(window.confirm("Are you sure to delete?"));
+
+      window.print();
+
+    </script>
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Object Arrays</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Object Arrays</h1>
+
+    <script>
+      /* Object Arrays [using Object Literal] */
+      var persons = [
+        { name: "Smith", age: 20 },
+        { name: "Jones", age: 25 },
+        { name: "Ford", age: 24 }
+      ];
+      console.log(persons);
+
+      /* Object Arrays [using Constructor function] */
+      var Person = function(name, age)
+      {
+        this.name = name;
+        this.age = age;
+      };
+
+      var persons2 =
+      [
+        new Person("Smith", 20),
+        new Person("Jones", 25),
+        new Person("Ford", 24)
+      ];
+      console.log(persons2);
+
+    </script>
+
+
+
+  </body>
+</html>
+

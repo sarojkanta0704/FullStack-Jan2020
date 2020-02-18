@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions - JavaScript</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Hello Functions</h1>
+
+    <script>
+      /* Calling function multiple times */
+      /* Function that receives two numbers and return max of them */
+      var getMaxOfTwoNumbers = function(a, b)
+      {
+        var c; //local variables: Variable that can be accessible within the same function only. It is not accessible outside the function.
+        if (a > b)
+        {
+          c = a;
+        }
+        else
+        {
+          c = b;
+        }
+        return c;
+      }
+
+      console.log(   getMaxOfTwoNumbers(   getMaxOfTwoNumbers(5, 10), 20)   );
+    </script>
+
+
+
+
+  </body>
+</html>
+

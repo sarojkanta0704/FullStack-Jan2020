@@ -1,0 +1,15 @@
+findIndex:
+   - Returns the index of first maching element.
+   - findIndex( function(variable) { return condition; } )
+
+
+map:
+   - Executes a function once for each element.
+   - map( function(variable) { ... } )
+
+forEach:
+   - Executes a function once for each element.
+   - Difference between "map" and "forEach" is:
+         "forEach" will not return anything.
+         "map" will return the array.
+   - forEach( function(variable) { ... } )

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSON - JavaScript</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>JSON</h1>
+
+    <script>
+      var Employee = function(name, dateOfBirth)
+      {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+      };
+
+      var emp1 = new Employee("Scott", new Date("2000-08-15"));
+      var empjson = JSON.stringify(emp1); //convert "Object" to "JSON".
+      var empobj = JSON.parse(empjson); //convert "JSON" to "Object"
+      console.log(empobj);
+
+    </script>
+
+
+
+
+  </body>
+</html>
+

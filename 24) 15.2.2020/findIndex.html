@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FindIndex - Arrays - JavaScript</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Arrays - FindIndex</h1>
+
+    <script>
+      /* FindIndex: Get index of first matching element */
+      var marks = [ 25, 80, 31, 90 ];
+      var result = marks.findIndex( 
+        function(m)
+        {
+          return m >= 35;
+        }
+      );
+      console.log(result); //Output: 1
+    </script>
+
+
+
+
+  </body>
+</html>
+

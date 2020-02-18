@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prototype</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Prototype</h1>
+
+    <script>
+      var Person = function(name, age)
+      {
+        this.name = name;
+        this.age = age;
+      };
+
+      Person.prototype.getName = function()
+      {
+        return this.name;
+      };
+
+      var persons2 =
+      [
+        new Person("Smith", 20),
+        new Person("Jones", 25),
+        new Person("Ford", 24)
+      ];
+      console.log(persons2);
+
+    </script>
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,32 @@
+- JSON is a universal data format to represent data (of a person or thing), which is supported by all languages.
+
+- JSON is mainly used to convert data from one language to other language. Ex: JavaScript to Java.
+		Step 1:   "JavaScript Object" --> JSON
+		Step 2:   "JSON"                      --> Java Object
+
+- JSON doesn't support methods.
+
+- JSON properties must have double quotes.
+
+- JSON supports nested objects / arrays.
+
+Real uses of JSON:
+	- Conversion data from one language to other language.
+	- To store data in browser's "localStorage" (browser memory). Ex: Gmail
+	- To receive data from server.
+
+
+------------------------------------------------------------------------------------
+
+
+Prototype
+------------
+	- Prototype is a model.
+	- The properties and methods that are stored in prototype will be copied into all objects automatically.
+	
+---------------------------------------------------------------------------------------
+
+Inheritance
+--------------
+  - Whenever an object is created based on existing object, we call it as "Inheritance".
+  

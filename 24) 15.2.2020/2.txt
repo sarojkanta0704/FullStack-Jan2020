@@ -1,0 +1,14 @@
+- Object is used to store set of values / functions about a person or thing.
+- Object is a collection of properties.
+- Each property can store a value.
+- The value of property can be a number / string / boolean / object / array / function.
+- Function inside the object is called as "method".
+
+Ex 1:
+	Create an object that stores person details.
+	Person name is "Ram". His date of birth is "1995-06-01". Email is "ram@gmail.com".
+	
+Ex 2:
+	Create an object that stores employee details.
+	Employee name is "Scott". His date of birth is "2000-08-15". Personal email is "scott@gmail.com". Office email is "scott@company.com". He has three mobile numbers: "1234", "8861", "7700". And also a function that calculates age based on date of birth.
+	
