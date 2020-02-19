@@ -1,0 +1,33 @@
+Events:
+ - An action performed by the user.
+ Ex: click
+
+1. click:
+	- Executes when the user clicks on the element.
+
+2. focus:
+	- Executes when the cursor enters into the element.
+
+3. blur:
+	- Executes when the cursor goes out of the element.
+
+4. change:
+	- Executes when the user changes the value of textbox / 
+	  date / checkbox / radio button / dropdownlist.
+
+5. keyup:
+	- Executes when the user presses any key on the keyboard
+                   (after accepting currently pressed character into the textbox).
+
+6. keypress:
+	- Executes when the user presses any key on the keyboard
+                 (before accepting currently pressed character into the textbox).
+
+
+
+www.asciitable.com
+65 to 90 		:	A-Z
+97 to 122		:	a-z
+48 to 57		:	0-9
+32 		:	Space
+8		:	Backspace
