@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript DOM</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+
+          <h4>Premium Calculator</h4>
+
+          <div class="form-group form-row border-top pt-3">
+            <label class="col-md-4 col-form-label">Customer Name:</label>
+            <div class="col-md-8">
+              <input type="text" placeholder="Customer Name" class="form-control" id="customername">
+
+              <span class="text-danger" id="customername-error" style="display:none"></span>
+            </div>
+          </div>
+
+          <div class="form-group form-row">
+            <label class="col-md-4 col-form-label">Date of Birth:</label>
+            <div class="col-md-8">
+              <input type="date" class="form-control" id="dateofbirth">
+
+              <span class="text-danger" id="dateofbirth-error" style="display:none"></span>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button class="btn btn-success" onclick="calculatePremium()">OK</button>
+          </div>
+
+          <div class="form-group form-row mt-3">
+            <label class="col-md-4 col-form-label">Premium Amount:</label>
+            <div class="col-md-8">
+              <input type="text" class="form-control" id="premium" disabled="disabled">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+      function calculatePremium()
+      {
+        //step 1: Get values from textboxes
+        var customerName = document.getElementById("customername").value;
+
+        var dateOfBirth = document.getElementById("dateofbirth").value;
+
+        //Customer name max length is 30
+        if (customerName.length > 30)
+        {
+          document.getElementById("customername-error").innerHTML = "Customer Name should be less than 30 characters";
+
+          document.getElementById("customername-error").style.display = "inline";
+          return;
+        }
+
+        //Customer name can't be empty
+        else if (customerName.length == 0)
+        {
+          document.getElementById("customername-error").innerHTML = "Customer Name can't be blank";
+
+          document.getElementById("customername-error").style.display = "inline";
+          return;
+        }
+
+        //Hide error message is Customer name is valid
+        else
+        {
+          document.getElementById("customername-error").innerHTML = "";
+
+          document.getElementById("customername-error").style.display = "none";
+        }
+
+        //Date of birth can't be empty
+        if (dateOfBirth == "")
+        {
+          document.getElementById("dateofbirth-error").innerHTML = "Date of birth can't be blank";
+
+          document.getElementById("dateofbirth-error").style.display = "inline";
+
+          return;
+        }
+
+        //Date of birth can't be future date
+        else if (new Date() < new Date(dateOfBirth))
+        {
+          document.getElementById("dateofbirth-error").innerHTML = "Date of birth can't be future date";
+
+          document.getElementById("dateofbirth-error").style.display = "inline";
+
+          return;
+        }
+
+        //Hide error message if date of birth is valid
+        else
+        {
+          document.getElementById("dateofbirth-error").innerHTML = "";
+
+          document.getElementById("dateofbirth-error").style.display = "none";
+
+          dateOfBirth = new Date(dateOfBirth);
+        }
+
+        var today = new Date();
+
+        var age = Math.floor((today - dateOfBirth) / 1000 / 60 / 60 / 24 / 30 / 12);
+
+        var premium;
+        
+        if (age < 18)
+        {
+          premium = 500;
+        }
+        else if (age == 18)
+        {
+          premium = 1000;
+        }
+        else if (age > 18)
+        {
+          premium = 1000 + (100 * (age - 18));
+        }
+
+        document.querySelector("#premium").value = premium;
+      }
+    </script>
+  
+  </body>
+</html>
+
+
+
+
