@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>setTimeout</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>setTimeout</h1>
+      <div id="div1">Please wait...</div>
+    </div>
+
+    <script>
+      //setTimeout: It will call a function after specified no. of milliseconds completed.
+
+      function showMessage()
+      {
+        document.querySelectorAll("#div1")[0].innerHTML = "Loaded.";
+      }
+      window.setTimeout(showMessage, 3000);
+    </script>
+  
+  </body>
+</html>
+
+
+
+

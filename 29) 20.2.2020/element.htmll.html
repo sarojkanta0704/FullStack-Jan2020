@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Element properties</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>Element properties</h1>
+
+      <div id="india" style="font-family: Tahoma;">
+        <p>Kolkata</p>
+        <p>Pune</p>
+        <p>Sri Nagar</p>
+      </div>
+
+    </div>
+
+    <script>
+      console.log(document.getElementById("india").tagName); //Name of tag
+
+      console.log(document.getElementById("india").parentElement); //Reference to parent tag
+
+      console.log(document.getElementById("india").children); //Array of child tags
+
+      console.log(document.getElementById("india").style.fontFamily); //"style" accesses css properties
+
+      document.getElementById("india").setAttribute("title", "Incredible India"); //Adding attribute
+
+      //document.getElementById("india").removeAttribute("title"); //Removing attribute
+
+      var a = document.getElementById("india").getAttribute("title"); //reading attribute
+      console.log(a);
+
+      console.log(document.getElementById("india").innerHTML); //Content including tags
+
+      console.log(document.getElementById("india").innerText); //Content excluding tags
+    </script>
+  
+
+  </body>
+</html>
+
+
+
+

@@ -1,0 +1,10 @@
+document.getElementById()		:only for id
+
+document.getElementsByClassName()	:only for class
+
+document.querySelectorAll()		:for all css 
+				selectors 
+				(multiple)
+
+document.querySelector()		:for all css 
+				selectors 				(single)
