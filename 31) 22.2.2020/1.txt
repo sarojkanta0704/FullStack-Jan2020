@@ -1,0 +1,44 @@
+1. require("modulename")
+		- It is a function to import / load a module.
+
+2. express()
+		- It is a function which creates a server.
+		
+3. app.listen(port no)
+		- "listen" is a method that starts the server; immediately it is able to receive 
+		any requests from browser.
+		
+		- port no: It is a number for unique identification of server.
+		
+		- On the same machine, multiple apps (servers) can run; each app (server) should have an unique port number.
+		
+		- Port no should be between 1024 to 65535.
+
+4. app.get("url")
+		- It receives "get" request for the specified url.
+		- When the browser sends a get request to the url, the function will execute.
+		
+5. app.post("url")
+		- It receives "post" request for the specified url.
+		- When the browser sends a post request to the url, the function will execute.
+		
+"get" request:
+	- To open the page / file / search purpose.
+	
+"post" request:
+	- For submiting data to server.
+
+
+
+"req" object
+	- The "req" (request) object represents the data that is sent from browser to server, including url, cookies, form and headers.
+	
+"res" object
+	- The "res" (response) object represents the data that is to be sent from server to browser.
+	
+res.send(data)
+	- To send message / content to browser.
+	
+res.sendFile(file path)
+	- To send content of a file to browser.
+
