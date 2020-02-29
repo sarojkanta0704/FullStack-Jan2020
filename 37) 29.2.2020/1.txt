@@ -1,0 +1,45 @@
+Declaration of variables:
+	1. var
+			- var  variablename = value;
+			- Local variables and Global variables
+	2. let
+			- let  variablename = value;
+			- Only for block level variable.
+	3. const
+			- const  constantname = value;
+			- Only for constants
+
+
+String Interpolation:
+	string message = "Hello " + name + ", your age is " + age + ".";
+	
+	string message = `Hello ${name} your age is ${age}.`;
+	
+
+Constructor:
+	
+	constructor(param1, param2, ...)
+	{
+	}
+	
+	- Used to initialize properties of a class.
+	- Executes when we create an object for class.
+	
+
+Inheritance:
+
+	class  parentclass
+	{
+	}
+	
+	class  childclass  extends  parentclass
+	{
+	}
+	
+	
+Access modifiers (or) Access Specifiers:
+-----------------------------------------------
+	1. private			:		Same class
+	2. protected		:		Same class + Child class
+	3. public				:		Everywhere
+
