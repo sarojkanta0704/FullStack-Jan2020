@@ -1,0 +1,29 @@
+<h4>Courses</h4>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a [routerLink]=" [ '/home' ] ">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Courses</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="card col-md-4" *ngFor="let course of courses">
+    <div class="card-header bg-dark text-white"><h4>{{course.courseName}}</h4></div>
+    <div class="card-body">
+
+      <table class="table table-sm table-borderless">
+        <tr>
+          <th>Course No</th>
+          <td>{{course.courseNo}}</td>
+        </tr>
+        <tr>
+          <th>Duration</th>
+          <td>{{course.duration}}</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+

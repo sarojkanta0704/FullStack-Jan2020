@@ -1,0 +1,5 @@
+index.html file contains html syntax (html, head, body).
+The compiled AppComponent (app.component.html + app.component.ts) will be reflected in <app-root> tag at index.html.
+
+Execution  >  localhost:4200   >  index.html   >  main.ts  >  AppModule (app.module.ts)  >  AppComponent (app.component.ts  and  app.component.html)  -->  Output
+
