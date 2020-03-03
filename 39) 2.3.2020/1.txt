@@ -1,0 +1,5 @@
+HttpClient:
+	- It is a pre-defined class in "@angular/common/http" package, which is used to send requests.
+	- This is also called as AJAX (Asynchronous JavaScript And Xml).
+	
+	
