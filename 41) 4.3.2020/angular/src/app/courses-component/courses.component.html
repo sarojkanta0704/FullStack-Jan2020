@@ -1,0 +1,186 @@
+<h4>Courses</h4>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a [routerLink]=" [ '/home' ] ">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Courses</li>
+  </ol>
+</nav>
+
+<button class="btn btn-primary" data-toggle="modal" data-target="#newFormModal" (click)="onNewCourseClick()">New Course</button>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Course No</th>
+          <th>Course Name</th>
+          <th>Duration</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let course of courses; let i = index">
+          <td>{{course.courseno}}</td>
+          <td>{{course.coursename}}</td>
+          <td>{{course.duration}}</td>
+          <td>
+            <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#editFormModal" (click)="onEditClick(i)">Edit</button>
+
+            <button class="btn btn-sm btn-danger ml-2" data-toggle="modal" data-target="#deleteFormModal" (click)="onDeleteClick(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+  
+
+
+<form [formGroup]="newForm">
+  <div class="modal fade" id="newFormModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insert Course</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="form-group form-row">
+            <label for="courseno" class="col-form-label col-lg-3">Course No:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="courseno" class="form-control" placeholder="Course No">
+            </div>
+          </div>
+          
+          <div class="form-group form-row">
+            <label for="coursename" class="col-form-label col-lg-3">Course Name:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="coursename" class="form-control" placeholder="Course Name">
+            </div>
+          </div>
+        
+          <div class="form-group form-row">
+            <label for="duration" class="col-form-label col-lg-3">Duration:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="duration" class="form-control" placeholder="Duration">
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button class="btn btn-success" data-dismiss="modal" (click)="onSaveClick()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+<form [formGroup]="editForm">
+  <div class="modal fade" id="editFormModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Course</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="form-group form-row">
+            <label for="courseno" class="col-form-label col-lg-3">Course No:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="courseno" class="form-control" placeholder="Course No" readonly="readonly">
+            </div>
+          </div>
+          
+          <div class="form-group form-row">
+            <label for="coursename" class="col-form-label col-lg-3">Course Name:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="coursename" class="form-control" placeholder="Course Name">
+            </div>
+          </div>
+        
+          <div class="form-group form-row">
+            <label for="duration" class="col-form-label col-lg-3">Duration:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="duration" class="form-control" placeholder="Duration">
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button class="btn btn-success" data-dismiss="modal" (click)="onUpdateClick()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+<form [formGroup]="deleteForm">
+  <div class="modal fade" id="deleteFormModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Delete Course</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <h4 class="text-danger mt-1 mb-1">Are you sure to delete this course?</h4>
+
+          <div class="form-group form-row">
+            <label for="courseno" class="col-form-label col-lg-3">Course No:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="courseno" class="form-control" placeholder="Course No" readonly="readonly">
+            </div>
+          </div>
+          
+          <div class="form-group form-row">
+            <label for="coursename" class="col-form-label col-lg-3">Course Name:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="coursename" class="form-control" placeholder="Course Name" readonly="readonly">
+            </div>
+          </div>
+        
+          <div class="form-group form-row">
+            <label for="duration" class="col-form-label col-lg-3">Duration:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="duration" class="form-control" placeholder="Duration" readonly="readonly">
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button class="btn btn-danger" data-dismiss="modal" (click)="onDeleteConfirmClick()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+

@@ -1,0 +1,82 @@
+<h4>Courses</h4>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a [routerLink]=" [ '/home' ] ">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Courses</li>
+  </ol>
+</nav>
+
+<button class="btn btn-primary" data-toggle="modal" data-target="#newFormModal">Insert</button>
+
+<div class="row">
+  <div class="card col-md-4" *ngFor="let course of courses">
+    <div class="card-header bg-dark text-white"><h4>{{course.coursename}}</h4></div>
+    <div class="card-body">
+
+      <table class="table table-sm table-borderless">
+        <tr>
+          <th>Course No</th>
+          <td>{{course.courseno}}</td>
+        </tr>
+        <tr>
+          <th>Duration</th>
+          <td>{{course.duration}}</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+
+<form [formGroup]="newForm">
+  <div class="modal fade" id="newFormModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insert Course</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="form-group form-row">
+            <label for="courseno" class="col-form-label col-lg-3">Course No:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="courseno" class="form-control" placeholder="Course No">
+            </div>
+          </div>
+          
+          <div class="form-group form-row">
+            <label for="coursename" class="col-form-label col-lg-3">Course Name:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="coursename" class="form-control" placeholder="Course Name">
+            </div>
+          </div>
+        
+          <div class="form-group form-row">
+            <label for="duration" class="col-form-label col-lg-3">Duration:</label>
+            <div class="col-lg-9">
+              <input type="text" formControlName="duration" class="form-control" placeholder="Duration">
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button class="btn btn-success" data-dismiss="modal" (click)="onSaveClick()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
