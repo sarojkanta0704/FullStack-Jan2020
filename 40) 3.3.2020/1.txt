@@ -1,0 +1,15 @@
+List of validations in reactive forms:
+	1. Validators.required()
+				- Specifies that the form control is mandatory (can't be blank).
+				- If the value is empty / blank, it will be "invalid".
+				
+	2. Validators.pattern()
+				- Specifies regular expression to check.
+				- If the value doesn't match with the specified regular expression, it will be "invalid".
+				Ex:  ^[0-9]*$			-  Digits only
+				        ^[a-zA-Z ]*$  - Alphabets only
+						
+	3. Validators.maxLength()
+				-  Specifies maximum number of characters allowed.
+				- If the value contain more than the specified no. of characters, it will be "invalid".
+				

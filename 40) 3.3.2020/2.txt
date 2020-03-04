@@ -1,0 +1,34 @@
+Data Bindings in Angular:
+	1.  Interpolation Binding:
+				Component  -->  Template
+				{{ property }}
+				
+				- It will display the value of property in template.
+				- If component changes the value of property, the same will be automatically reflected in the template.
+				Ex:  {{courseno}}
+				
+	2. Property Binding
+				Component   -->  Template
+				[property]
+				
+				- It will not display the value; but assigns the value into property.
+				Ex:  [courseno]
+				
+	3. Event Binding
+				Template   -->  Component
+				(event)="methodname()"
+				
+				- If the user performs an event, the component's method will execute.
+				
+				Ex:  (click)="someMethod()"
+				
+	4. Two-Way Binding
+				Template -->  Component
+				Component --> Template
+				
+				formControlName="someName"
+				
+				- If the user modifies the value of element in template, the same reflects in component's form control.
+				- If the developer modifies the value of "form control" in template, the same reflects in element at template.
+				Ex:  formControlName="courseno"
+				       [(ngModel)]="courseno"
