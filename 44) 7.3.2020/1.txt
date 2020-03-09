@@ -1,0 +1,57 @@
+FormGroup
+	- valid
+			true		:	If all the form controls are valid.
+			false	:	If any one of the form controls is invalid.
+	- invalid
+			true		:	If any one of the form controls is invalid.
+			false	:	If all the form controls are valid.
+
+
+FormControl
+	- valid
+			true		:	If the form control's value is valid.
+			false	:	If the form control's value is invalid.
+			
+	- invalid
+			true		:	If the form control's value is invalid.
+			false	:	If the form control's value is valid.
+			
+	- prestine
+			true		:	If the form control's value is not modified.
+			false	:	If the form control's value is modified
+							at least once.
+			
+	- dirty
+			true		:	If the form control's value is modified
+							at least once.
+			false	:	If the form control's value is not modified.
+
+	- touched
+			true		:	If the form control is focused at least once.
+			false	:	If the form control is not focused at least once.
+
+	- untouched
+			true		:	If the form control is not focused at least once.
+			false	:	If the form control is focused at least once.
+
+	- errors
+			required = true		:	Form control is invalid because of
+												"Validators.required".
+			pattern = true		:	Form control is invalid because of
+												"Validators.pattern".
+			minlength = true	:	Form control is invalid because of
+												"Validators.minlength".
+			maxlength = true	:	Form control is invalid because of
+												"Validators.maxlength".
+												
+FormGroup can be accessed as:		loginForm
+															this.loginForm
+
+													Ex:   loginForm.valid
+													
+FormControl can be accessed as:		
+										loginForm.get("form control name")
+										this.loginForm.get("form control name")
+
+							Ex:   loginForm.get("username").valid
+							
