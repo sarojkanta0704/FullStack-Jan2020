@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+  <script
+  src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+  <link href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" rel="stylesheet">
+
+  <title>jQuery</title>
+
+  <style>
+    .box
+    {
+      background-color: #456ebb;
+      text-shadow: 3px 3px 4px #000000;
+
+    }
+
+    .box2
+    {
+      background-color: #00ff00;
+      color: #ffffff;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery</h1>
+
+  <div id="cities" class="box">
+    <p>Chennai</p>
+    <p>Pune</p>
+    <p>Mumbai</p>
+    <p>Lucknow</p>
+  </div>
+  
+  <script>
+    //get html
+    //console.log( $("#cities").html() );
+
+    //get text
+    //console.log( $("#cities").text() );
+
+    //set html
+    ///$("#cities").html("<p>Hyderabad</p>");
+
+    //set text
+    //$("#cities").text("Hyderabad");
+
+    //before
+    //$("#cities").before("<p>New Delhi</p>");
+
+    //prepend
+    //$("#cities").prepend("<p>New Delhi</p>");
+
+    //append
+    //$("#cities").append("<p>New Delhi</p>");
+
+    //after
+    //$("#cities").after("<p>New Delhi</p>");
+
+    //wrap
+    //$("p").wrap("<div class='mycity'></div>");
+
+    //remove
+    //$("#cities").remove();
+
+    //replaceWith
+    //$("#cities").replaceWith("<span>list of cities was here</span>");
+
+    //empty
+    //$("#cities").empty();
+
+    //$("#cities").hide(3000); //3 sec
+
+    //$("#cities").hide(); //immediate
+    //$("#cities").show(400); //400 milli sec
+
+    //$("#cities").hide(); //immediate
+    //$("#cities").fadeIn(400); //400 milli sec
+
+    //$("#cities").fadeOut(3000); //3 sec
+
+    //$("#cities").slideUp(3000); //3 sec
+
+    //$("#cities").hide(); //immediate
+    //$("#cities").slideDown(3000); //3 sec
+
+    //$("#cities").css( "background-color", "lightgreen" );
+
+    //$("#cities").css( { "background-color": "lightgreen", "color": "white", "font-size": "30px"  } );
+
+    //$("#cities").animate( { "background-color": "#00ff00", "color": "white", "font-size": "30px"  }, 2000 );
+
+    //$("#cities").addClass("box2", 3000);
+
+    //$("#cities").switchClass("box", "box2", 3000);
+  </script>
+</body>
+</html>
+

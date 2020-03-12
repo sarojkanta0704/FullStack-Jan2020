@@ -1,0 +1,8 @@
+jQuery
+	- Shortcut library of JavaScript
+	- It is not a language.
+	- It is a collection of functions that are written in JavaScript language.
+	- jQuery is open-source.
+	- jQuery is free to use.
+	- jQuery is developed by "John Resig".
+	

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery - Home Page</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      
+      <div class="col-md-6">
+        <h4>Interest Calculator</h4>
+
+        <form>
+          
+          <div class="form-row form-group">
+            <label for="amount" class="col-form-label col-md-3">Amount:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="amount" placeholder="Amount" value="10000">
+            </div>
+          </div>
+
+          <div class="form-row form-group">
+            <label for="interestrate" class="col-form-label col-md-3">Interest Rate:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="interestrate" placeholder="Interest Rate" value="7.2">
+            </div>
+          </div>
+
+          <div class="form-row form-group">
+            <label for="years" class="col-form-label col-md-3">No. of years:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="years" placeholder="Years" value="5">
+            </div>
+          </div>
+
+          <div class="my-2 text-center">
+            <button type="button" class="btn btn-primary" id="okbutton">OK</button>
+          </div>
+
+          <div class="form-row form-group">
+            <label for="interest" class="col-form-label col-md-3">Interest Earned:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="interest" placeholder="Interest" readonly="readonly">
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="col-md-6 netamountbox">
+        
+        <h3>Net Amount</h3>
+        <h1><span id="netamount"></span></h1>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    
+    var calculate = function()
+    {
+      var amount = Number($("#amount").val());
+      var interestrate = Number($("#interestrate").val());
+      var years = Number($("#years").val());
+
+      var interest = (amount * interestrate * years) / 100;
+      $("#interest").val(interest);
+
+      var netamount = amount + interest;
+
+      showNumber(amount, netamount);
+
+    };
+
+    $("#okbutton").click(calculate);
+
+    $(document).ready(
+      function() {
+        calculate();
+      }
+    );
+
+    function showNumber(amount,  value)
+    {
+      var i = amount;
+      var intr = setInterval(function() {
+        $("#netamount").html(i);
+        i++;
+
+        if (i >= value)
+        {
+          clearInterval(intr);
+        }
+      }, 0.00000000025);
+    }
+    
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,77 @@
+Functions of jQuery:
+
+	1. html()
+			- It gets the inner html of the element.
+			
+	2. text()
+			- It gets the inner text of the element.
+			
+	3. html( value )
+			- It sets the inner html of the element.
+			
+	4. text( value )
+			- It sets the inner text the element.
+
+	5. val( )
+			- It gets "value" of the element (<input> tag or <select> tag).
+			
+	6. val( value )
+			- It sets "value" of the element (<input> tag or <select> tag).
+	
+	7. before( value )
+			- It adds new value at before the opening tag of the selected element.
+
+	8. prepend( value )
+			- It adds new value at after the opening tag of the selected element.
+
+	9. append( value )
+			- It adds new value at before the closing tag of the selected element.
+
+	10. after( value )
+			- It adds new value at after the closing tag of the selected element.
+
+	11. wrap( value )
+			- It adds parent tag (based on value) for every element among the selected elements.
+	
+	12. remove( )
+			- It removes the selected element.
+			
+	13. replaceWith( value )
+			- It replaces the selected element with specified new element (value).
+			
+	14. empty( )
+			- It empties (removes) inner html of the selected element.
+		
+	15. show(milli sec)
+			- It shows the selected element slowly, based on milli seconds by animating width, height, opacity properties.
+		
+	16. hide(milli sec)
+			- It hides the selected element slowly, based on milli seconds by animating width, height, opacity properties.
+
+	17. fadeIn(milli sec)
+			- It shows the selected element slowly, based on milli seconds by animating 'opacity' property.
+
+	18. fadeOut(milli sec)
+			- It hides the selected element slowly, based on milli seconds by animating 'opacity' property.
+			
+	19. slideDown(milli sec)
+			- It shows the selected element slowly, based on milli seconds by animating 'height' property.
+
+	20. slideUp(milli sec)
+			- It hides the selected element slowly, based on milli seconds by animating 'height' property.
+			
+	21. css( property, value )
+			- It sets specified css property to the selected element.
+	
+	22. css( { property: value, property: value } )
+			- It sets specified set of css properties to the selected element.
+
+	23. animate( { property: value, property: value } , milli sec )
+			- It animates (applies slowly) the set of specified css properties to the selected element.
+			
+	24. addClass("class name", milli sec)
+	
+	25. switchClass("class name", milli sec)
+	
+
+	
