@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 5 - Storage</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+  <div class="container-fluid">
+    
+    <h4>Storage</h4>
+
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+
+      <div class="form
+      -group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password">
+      </div>
+      
+      <button type="button" class="btn btn-primary" id="loginbutton">Login</button>
+
+      <button type="button" class="btn btn-primary" id="clearbutton">Clear</button>
+    </form>
+
+  </div>
+
+  <script>
+
+    //At page loading time
+    $(function() {
+      if (localStorage.logindetails == undefined)
+      {
+        //local storage is  not available
+      }
+      else
+      {
+        var lg = JSON.parse( localStorage.logindetails );
+        $("#email").val(lg.email);
+        $("#password").val(lg.password);
+      }
+    });
+
+
+    /* When the user clicks on Login button */
+    $("#loginbutton").click(function() {
+      var em = $("#email").val();
+      var pwd = $("#password").val();
+
+      localStorage.logindetails = JSON.stringify( { email: em, password: pwd } );
+
+      console.log("Stored");
+    } );
+
+    /* When the user clicks on Clear button */
+    $("#clearbutton").click(function() {
+      localStorage.removeItem("logindetails");
+      $("#email").val("");
+      $("#password").val("");
+    } );
+  </script>
+  
+  
+</body>
+</html>

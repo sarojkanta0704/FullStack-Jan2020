@@ -1,0 +1,27 @@
+HTML 5 API
+--------------
+ 1. Storage
+ 2. Geo Location
+
+
+1. Storage
+------------
+	A. Local Storage:
+	-------------------
+		- Used to store data permanently.
+		- Will be stored in the browser memory even after browser is closed.
+		- Syntax:		localStorage.key = value;
+		
+	B. Session Storage:
+	-----------------------
+		- Used to store data temporarily.
+		- Will be deleted automatically once the browser is closed.
+		- Syntax:		sessionStorage.key = value;
+
+
+2. Geo Location:
+-------------------
+	- Provide you latitude & longitude values of user's device.
+	- Used to identify the location of user device.
+	
+	
